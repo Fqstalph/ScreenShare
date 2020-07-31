@@ -19,8 +19,8 @@ class Main extends PluginBase implements Listener {
 
    public function onCommand(CommandSender $sender, Command $cmd, String $label, array $args) : bool{
       switch($cmd->getName()) {
-               case "ss":
-                 if($sender->hasPermission("ss.cmd")) {
+            case "ss":
+              if($sender->hasPermission("ss.cmd")) {
                   if($sender instanceof Player) {
                    $target = $this->getServer()->getPlayer($args[0]);
                    $target->sendTitle("§4You're under", "§4screenshare.", 300, 100);
@@ -32,19 +32,19 @@ class Main extends PluginBase implements Listener {
                  } else {
                    $sender->sendMessage("§cPuoi eseguire questo comando solo in-game!");
                  }
-               } else {
-                 $sender->sendMessage("§cYou don't have enough permission!");
-               }
-			   break;
-			   case "ok":
-			      if($sender->hasPermission("ss.cmd")) {
+                 } else {
+                   $sender->sendMessage("§cYou don't have enough permission!");
+                 }
+		break;
+		case "ok":
+		  if($sender->hasPermission("ss.cmd")) {
                   if($sender instanceof Player) {
                    $target = $this->getServer()->getPlayer($args[0]);
                    $target->setImmobile(false);
                  } else {
                    $sender->sendMessage("§cPuoi eseguire questo comando solo in-game!");
                  }
-				  } else {
+		} else {
             $sender->sendMessage("§cYou don't have enough permission!");
           }
            return true;
