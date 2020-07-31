@@ -1,0 +1,10 @@
+name: ScreenShare
+api: 3.0.0
+version: 2.0
+main: Fqstalph\Main
+author: Fqstalph
+commands:
+ ss:
+  description: "ScreenShare Command"
+ ok:
+  description: "Stop SS"
